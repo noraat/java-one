@@ -1377,3 +1377,164 @@ public class Main {
     }
 }
 ```
+
+
+```java
+
+//this is the main piece of the program (Public class Main)
+
+public class Main {
+  public static void main(String[] args) {
+
+    //This is a string
+    var text = "This is a random text";
+    text = "this is another text";
+    text = "March";
+    //viimane rida on see, mis overridib eelmise
+
+    //boolean
+    var isDisabled = false;
+    isDisabled = true;
+
+    //boolean võib olla ka vari asemel
+    boolean gameOver = false;
+    gameOver = true;
+
+    boolean clientIsActive = true;
+    clientIsActive = false; 
+    // see true ja false tähendab, et kunagi võib olla true ja kunagi võib olla false
+
+    //number
+    var number = 5;
+    number = number + 7;
+
+    text = text + " " + number; 
+
+    //float, character
+    var interestingNumber = 1.5;
+
+    var mixedInterestingNumber =
+interestingNumber + number; 
+
+    var newCoolNumber = mixedInterestingNumber + (number * number);
+
+    // kui kasutada \n siis tuleb uus rida 
+    // \t on tab ehk siis hakkab veidi kaugemalt pihta 
+    //string on alati " " sees ja sa nimetad seda stringiks
+    
+    String name = "Liisa";
+    String surname = "Karjalainen";
+    int age = 25;
+    String country = "Estonia";
+    var yearBorn = 2024 - (age);
+    String gender = "female";
+    String hairColour = "red";
+    String eyeColour = "brown";
+    String pet = "hamster";
+    var hasChildren = true;
+    hasChildren = false; 
+
+    String bankName = "Bank of Ducks";
+    bankName = bankName.toUpperCase();
+    var liisaAccountNumber = "123456";
+    int liisaMoneyOnAccount = 1000;
+    int liisaSavings = 200;
+    int liisaTotalMoney = liisaMoneyOnAccount + liisaSavings;
+    int liisaPetBills = 300;
+    int liisaTotalMoneyAfterPetBills = liisaTotalMoney - liisaPetBills;
+
+
+    System.out.println(name + " " + surname + " " + "is" + " " + age + " years old." + "\n" +  "She is from" + " " + country + ".");
+    
+
+
+    System.out.println(name);
+    System.out.println(age);
+    System.out.println(gender);
+    System.out.println(hairColour);
+    System.out.println(eyeColour);
+    System.out.println(pet);
+    System.out.println(hasChildren);
+    System.out.println(yearBorn + "\n");
+    
+    System.out.println(bankName);
+    System.out.println(liisaAccountNumber);
+    System.out.println(liisaMoneyOnAccount);
+    System.out.println(liisaSavings);
+    System.out.println(liisaTotalMoney);
+    System.out.println(liisaPetBills);
+    System.out.println(liisaTotalMoneyAfterPetBills);
+
+
+
+    
+    //System.out.println("Hello world!");
+    //System.out.println(text);
+    //System.out.println(isDisabled);
+    //System.out.println(number);
+    //System.out.println(interestingNumber);
+    //System.out.println(mixedInterestingNumber);
+    //System.out.println(newCoolNumber);
+    
+  }
+
+}
+```
+
+
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    String studentName = "Anna";
+    int yearOfSchool = 12;
+    double studentAge = 18;
+    double grade = 6.8;  
+    boolean olympicsWinner = true;
+    
+    boolean isAgeEligible = studentAge >= 18;
+    boolean isGradeEligible = grade >= 8;
+
+    if (isAgeEligible && (isGradeEligible || olympicsWinner)) {
+      System.out.println("You are accepted!");
+    } else {
+      System.out.println("You are not accepted. Reasons:");
+
+      if (!isAgeEligible) {
+        System.out.println("- You are not eligible due to age.");
+      }
+      if (!isGradeEligible && !olympicsWinner) {
+        System.out.println("- You are not eligible due to insufficient grade.");
+      }
+      if (!olympicsWinner && isAgeEligible && isGradeEligible) {
+        System.out.println("- You are not eligible due to not being an Olympics winner.");
+      }
+    }
+  }
+}
+
+```
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Let's go and check out what is in the fridge!");
+    var isFridgeOpen = true;
+    String result;
+    // string result tähendab, et result on alati tekst. Me ei andnud sellele seal üleval tähendust, sest see tuleb hiljem. 
+
+    if (isFridgeOpen) {
+      var item1 = "Cheese ";
+      var item2 = "Milk ";
+      var item3 = "Eggs ";
+      result = item1 + item2 + item3;
+    } else {
+      result = "Fridge is closed, open the fridge";
+    }
+
+    System.out.println(result);
+    // ERROR System.out.println(item1);
+  }
+}
+
+```
